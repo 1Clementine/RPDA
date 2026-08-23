@@ -1,0 +1,2 @@
+model,category,checkpoint_path,REEF_L9,BPB_ratio,KL,reef_protocol_id,output_protocol_id,status,notes
+GPT-2 WikiText-2 fine-tune (train split),gpt2_variant,runs/gpt2_wikitext_ft_v2,0.9969,0.8857,0.5824,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,frozen_20260805,"Corrected: trained on WikiText-2 TRAIN split, not test split"

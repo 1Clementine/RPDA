@@ -1,0 +1,4 @@
+comparison,control_checkpoint,treatment_checkpoint,control_REEF_L9,treatment_REEF_L9,delta_REEF_L9,control_BPB_ratio,treatment_BPB_ratio,delta_BPB_ratio,control_KL,treatment_KL,delta_KL
+Immediate (recovery effect),RPDA-C-r16,RPDA-S-r16(post),0.507983,0.439403,-0.068580,1.254526,1.060201,-0.194325,0.860743,0.341521,-0.519222
+Continuation-4 (r20),RPDA-C-r20,RPDA-S-r20(r16-only),0.492083,0.425621,-0.066462,1.297711,1.079427,-0.218284,1.025081,0.403878,-0.621203
+Continuation-8 (r24),RPDA-C-r24,RPDA-S-r24(r16-only),0.483097,0.416409,-0.066688,1.343578,1.099632,-0.243946,1.204205,0.474021,-0.730184

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Control experiments and utility-matched baselines. E1 controls verify RPDA effects are not from repackaging artifacts. E2 baselines show RPDA achieves fingerprint reduction beyond general model degradation.}
+\label{tab:controls}
+\small
+\begin{tabular}{lcccccl}
+\toprule
+Model & Setting & Trainable & BPB & KL & REEF & ED-BA & Notes \\
+\midrule
+  Source & — & — & 1.0 & 0.0 & 1.0 & 0.698 & Reference \\
+  2+2 control & — & — & 1.0 & 0.0 & 1.0 & 0.698 & Identity repackaging \\
+  Boundary-only & — & — & 1.0 & 0.0 & 1.0 & 0.698 & Hook-only control \\
+  3+1 RPDA (1 rd) & — & — & 1.007 & 0.059 & — & 0.661 & Real perturbation \\
+  \midrule Recovery-only & steps=200 & last4 & 1.014 & 0.13 & — & 0.651 & Output distill only \\
+  Weight perturb & $\sigma{=}0.02$ & all & 1.058 & 0.205 & — & 0.666 & Noise control \\
+  Fine-tune & steps=50 & last4 & 1.439 & 3.334 & — & 0.545 & LM finetuning \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,34 @@
+item,final_value_or_config,protocol,source_file,script_or_code,line_number,status,paper_suggestion
+RPDA type,3+1 alpha-split + gamma-correct compression,gamma_correct_v1,scripts_final/rebuild_gpt2_gamma_correct.py,rebuild_gpt2_gamma_correct.py,L2-5,VERIFIED,
+Alpha,0.10,—,rebuild_gpt2_gamma_correct.py,L115,default=0.10,VERIFIED,
+Gamma schedule,"[0.01,0.01,0.005,0.005,0.0,0.0]",—,rebuild_gpt2_gamma_correct.py,L116,,VERIFIED,6 gamma values for 6 groups of 4 layers
+Window span,All 12 layers every round (global),—,rebuild_gpt2_gamma_correct.py,L38-104,,VERIFIED,No layer scoping
+Rounds,30,—,rebuild_gpt2_gamma_correct.py,L117,,VERIFIED,
+Cumulative rule,rN = compress(split(rN-1)). r00=Source.,—,rebuild_gpt2_gamma_correct.py,L146-175,,VERIFIED,
+Recovery type,Output-side KL distillation,kl_distill_v1,scripts_final/formal_output_recovery_v2.py,L2,,VERIFIED,"No CE loss, no intermediate matching"
+Trainable layers,last_n (typically last4 of 12),—,formal_output_recovery_v2.py,L35-38,,VERIFIED,Does NOT include final LN or lm_head
+Optimizer,"AdamW, lr=2e-6 to 3e-5",—,formal_output_recovery_v2.py,L116/166,,VERIFIED,weight_decay=0.01
+Training data,"WikiText-2 train, 256-token blocks",—,formal_output_recovery_v2.py,L3-4,,VERIFIED,Train/test split official
+Recovery points,"r16, r24, r30 — same config",—,runs/twostage_staged/SR-r*-rec,,,VERIFIED,
+ED-BA r28_raw,mean=0.5109 std=0.0021 (5 seeds),edba_5seed_v1,results/frozen/4_gpt2_edba_final.csv,rerun July 20,row 7,VERIFIED,
+ED-BA r28_staged,mean=0.5212 std=0.0424 (5 seeds),edba_5seed_v1,results/frozen/4_gpt2_edba_final.csv,rerun July 20,row 14,VERIFIED,
+ED-BA std,Sample std ddof=1,edba_5seed_v1,4_gpt2_edba_final.csv,column std_method,,VERIFIED,
+ED-BA completeness,17/17 verified,—,4_gpt2_edba_final.csv,,,VERIFIED,
+Pythia REEF r01 L12-23,0.888,official_reef_fixed_layer_v1,results/frozen/6_pythia_auxiliary.csv,,,VERIFIED,Replaces old row-best 0.926
+Pythia REEF r02 L12-23,0.500,official_reef_fixed_layer_v1,6_pythia_auxiliary.csv,,,VERIFIED,
+Pythia REEF r02_rec L12-23,0.510,official_reef_fixed_layer_v1,6_pythia_auxiliary.csv,,,VERIFIED,Recovery barely changes REEF
+Pythia ED-BA,All 4 checkpoints have 5-seed data,edba_5seed_v1,6_pythia_auxiliary.csv,,,VERIFIED,
+Pythia old values,row-best 0.926/0.719 DEPRECATED,—,,,,MISSING_IN_FROZEN_CSV,Paper must use official values only
+GhostSpec MSE,"Inverted sigmoid of raw MSE. Range (0,1). Higher=more similar.",GhostSpec_v1,/home/syh/Work/Other/Research/GhostSpec/compare_models.py,L78-85,,VERIFIED,
+GhostSpec correlation,Distance correlation (dcor) of POSA-aligned singular value sequences,GhostSpec_v1,GhostSpec/compare_models.py,L279-325,,VERIFIED,
+Ghost r30 RAW correlation,0.999344,GhostSpec_v1,/tmp/ghost_all_results.csv,,,VERIFIED,RPDA invisible to GhostSpec
+Ghost r30 REC correlation,0.926785,GhostSpec_v1,/tmp/ghost_all_results.csv,,,VERIFIED,Recovery training IS visible
+GPT-Neo-125M L9 vs GPT2,CKA=0.391,official_reef_fixed_layer_v1,Session July 20,,,VERIFIED,
+Pythia-410M L18 vs GPT2,CKA=0.332,official_reef_fixed_layer_v1,Session July 20,,,VERIFIED,
+Qwen2.5-0.5B L18 vs GPT2,CKA=0.283,official_reef_fixed_layer_v1,Session July 20,,,VERIFIED,
+OPT-350M L18 vs GPT2,CKA=0.278,official_reef_fixed_layer_v1,Session July 20,,,VERIFIED,
+TinyLlama-1.1B,NOT IN PROJECT,—,,,,MISSING,Remove from paper
+REEF dataset,TruthfulQA-200,—,data/truthfulqa.csv,,,VERIFIED,
+REEF extraction,"Last-token, left-padding, max_length=512",—,REEF src/generate_activations.py,get_acts(),,VERIFIED,
+BPB,"cross_entropy/log(2), WikiText-2 test, 256-token blocks",twostage_v1,results/archive/twostage/raw_bpbkl.csv,,,VERIFIED,
+GPT-2 model,"GPT-2 124M, 12L, 768 hidden",—,runs/twostage_staged/SR-r00,,,VERIFIED,

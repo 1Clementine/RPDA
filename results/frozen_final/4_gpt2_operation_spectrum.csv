@@ -1,0 +1,8 @@
+model,category,checkpoint_path,REEF_L9,BPB,BPB_ratio,KL,reef_protocol_id,output_protocol_id,status
+GPT-2 Source,self_reference,models/victim/base/gpt2,1.0,5.635329,1.0,0.0,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2 WikiText fine-tune,gpt2_variant,runs/gpt2_wikitext_ft_v2,0.9969,4.723863,0.8857,0.5824,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2 Code fine-tune,gpt2_variant,runs/gpt2_code_ft,0.998949,5.835553,1.03553,0.10785,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2 Weight Interp λ=0.3,gpt2_variant,runs/gpt2_interp_0.3,0.395917,14.075779,2.497774,5.776153,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2 Weight Interp λ=0.5,gpt2_variant,runs/gpt2_interp_0.5,0.394278,14.8632,2.637503,6.311198,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+RPDA-C-r60 (pure),rpda,runs/twostage_raw_extended/r60,0.473026,9.472048,1.680833,2.535898,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+RPDA-S-r60(rec),rpda_recovery,runs/twostage_recovery_every4/r60-rec/best_checkpoint,0.336396,6.392733,1.134403,0.686084,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified

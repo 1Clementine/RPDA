@@ -1,0 +1,55 @@
+{
+  "reef_protocol": {
+    "id": "reef_fixed_L9_max512_HSIC_v2",
+    "layer": 9,
+    "layer_semantics": "0-based block index 9 (hidden_states[10] for GPT-2 12L)",
+    "kernel": "linear CKA (HSIC)",
+    "preprocessing": "center=True, scale=True (unit-variance normalization via std(ddof=0))",
+    "aggregation": "none — single layer CKA (fixed L9 → L9 for all 12L models)",
+    "dataset": "TruthfulQA-200",
+    "sample_count": 200,
+    "extraction": "hook-based, last-token, left-padding, max_length=512",
+    "equivalent_depth_for_24L": "NOT USED — only 12-layer models included",
+    "self_check": "Source vs Source = 1.0000000000"
+  },
+  "output_protocol": {
+    "id": "bpb_wikitext_25600_v2",
+    "dataset": "WikiText-2 test",
+    "block_size": 256,
+    "max_tokens": 25600,
+    "num_blocks": 39,
+    "bpb_formula": "cross_entropy / log(2)",
+    "kl_formula": "KL divergence against source model logits, no temperature scaling"
+  },
+  "rpda_config": {
+    "type": "3+1 alpha-split + gamma-correct compression",
+    "alpha": 0.10,
+    "gamma_schedule": [0.01, 0.01, 0.005, 0.005, 0.0, 0.0],
+    "window": "All 12 layers every round (global)",
+    "cumulative_rule": "rN = gamma_compress(alpha_split(rN-1))"
+  },
+  "recovery_config": {
+    "script": "scripts_final/formal_output_recovery_v2.py",
+    "lr": 5e-5,
+    "steps": 1000,
+    "scope": "last8",
+    "optimizer": "AdamW",
+    "objective": "KL divergence (log_target=True, temperature=2.0)",
+    "teacher": "models/victim/base/gpt2",
+    "train_data": "WikiText-2 train, 256-token blocks",
+    "recovery_strategy": "every 4 rounds starting from r16, attack continues from recovered checkpoint"
+  },
+  "checkpoint_locations": {
+    "pure_r01_r30": "runs/twostage_raw/r01-r30",
+    "pure_r31_r60": "runs/twostage_raw_extended/r31-r60",
+    "recovery_every4": "runs/twostage_recovery_every4/r16-rec through r60-rec",
+    "external_models": "models/external/{gpt-neo-125m,opt-125m,pythia-160m}"
+  },
+  "computed": "2026-07-30",
+  "computation_scripts": [
+    "scripts_final/reef_unified_protocol_audit.py",
+    "scripts_final/compute_bpb_kl_batch.py",
+    "scripts_final/extend_rpda_trajectory.py",
+    "scripts_final/build_recovery_trajectory.py"
+  ]
+}

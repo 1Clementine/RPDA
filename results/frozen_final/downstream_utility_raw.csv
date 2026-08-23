@@ -1,0 +1,11 @@
+model,path,task,n,acc,acc_norm
+Source,models/victim/base/gpt2,arc_easy,497,0.44668008048289737,0.3702213279678068
+Source,models/victim/base/gpt2,piqa,500,0.626,0.622
+C-r16,runs/twostage_raw/r16,arc_easy,497,0.39436619718309857,0.3299798792756539
+C-r16,runs/twostage_raw/r16,piqa,500,0.602,0.596
+S-r16-rec,runs/twostage_recovery_every4/r16-rec/best_checkpoint,arc_easy,497,0.42655935613682094,0.32193158953722334
+S-r16-rec,runs/twostage_recovery_every4/r16-rec/best_checkpoint,piqa,500,0.594,0.592
+C-r40,runs/twostage_raw_extended/r40,arc_easy,497,0.35412474849094566,0.3058350100603622
+C-r40,runs/twostage_raw_extended/r40,piqa,500,0.574,0.58
+S-r40-rec,runs/twostage_recovery_every4/r40-rec/best_checkpoint,arc_easy,497,0.42857142857142855,0.33601609657947684
+S-r40-rec,runs/twostage_recovery_every4/r40-rec/best_checkpoint,piqa,500,0.606,0.606

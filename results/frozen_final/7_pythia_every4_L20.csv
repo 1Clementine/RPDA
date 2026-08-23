@@ -1,0 +1,4 @@
+model,checkpoint,round,checkpoint_path,REEF_L20,BPB_ratio,KL,ED_BA,reef_protocol,output_protocol,edba_layers,status,notes
+Pythia-410M,Pythia_Source,0,runs/pythia_every4_L20/r00,1.000000,1.000000,0.000000,0.7810,reef_fixed_L20_max512_HSIC_v1,pythia_output_wikitext2_v1,"[14,18,22]",frozen_20260731,Self-reference
+Pythia-410M,Pythia_every4_r01,1,runs/pythia_every4_L20/r01,0.820409,1.049823,0.171015,0.6778,reef_fixed_L20_max512_HSIC_v1,pythia_output_wikitext2_v1,"[14,18,22]",frozen_20260731,
+Pythia-410M,Pythia_every4_r02,2,runs/pythia_every4_L20/r02,0.412172,1.358714,1.256878,0.5307,reef_fixed_L20_max512_HSIC_v1,pythia_output_wikitext2_v1,"[14,18,22]",frozen_20260731,

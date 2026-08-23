@@ -1,0 +1,21 @@
+model,trajectory,checkpoint,round,checkpoint_path,ed_ba_mean,ed_ba_std,protocol_id,layers,dataset,status
+GPT-2,source,Source,0,models/victim/base/gpt2,0.6712,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r04,4,runs/twostage_raw/r04,0.5934,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r08,8,runs/twostage_raw/r08,0.6141,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r12,12,runs/twostage_raw/r12,0.6367,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r16,16,runs/twostage_raw/r16,0.6224,0.0007,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r20,20,runs/twostage_raw/r20,0.5738,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r24,24,runs/twostage_raw/r24,0.5567,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r28,28,runs/twostage_raw/r28,0.5281,0.0007,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r30,30,runs/twostage_raw/r30,0.5214,0.0007,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r32,32,runs/twostage_raw_extended/r32,0.5163,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r36,36,runs/twostage_raw_extended/r36,0.5156,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,pure,RPDA-C-r40,40,runs/twostage_raw_extended/r40,0.5108,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r16(rec),16,runs/twostage_recovery_every4/r16-rec/best_checkpoint,0.5653,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r20(rec),20,runs/twostage_recovery_every4/r20-rec/best_checkpoint,0.5597,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r24(rec),24,runs/twostage_recovery_every4/r24-rec/best_checkpoint,0.5740,0.0007,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r28(rec),28,runs/twostage_recovery_every4/r28-rec/best_checkpoint,0.5802,0.0009,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r30,30,runs/twostage_recovery_every4/r30,0.5778,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r32(rec),32,runs/twostage_recovery_every4/r32-rec/best_checkpoint,0.5836,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r36(rec),36,runs/twostage_recovery_every4/r36-rec/best_checkpoint,0.5922,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen
+GPT-2,recovery,RPDA-S-r40(rec),40,runs/twostage_recovery_every4/r40-rec/best_checkpoint,0.5835,0.0000,edba_tqa_binary_layers_6_8_10_logreg_5seed_v1,"[6,8,10]",TQA_binary_jsonl (legacy),frozen

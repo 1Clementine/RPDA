@@ -1,0 +1,5 @@
+model,architecture,layers,params,REEF_L9,reef_protocol_id,status
+GPT-2,GPT-2 decoder,12,124M,1.000000,reef_fixed_L9_max512_HSIC_v2,self_reference
+GPT-Neo-125M,GPT-Neo (GPT-like),12,125M,0.465078,reef_fixed_L9_max512_HSIC_v2,verified
+OPT-125M,OPT decoder (pre-norm),12,125M,0.257392,reef_fixed_L9_max512_HSIC_v2,verified
+Pythia-160M,GPT-NeoX (parallel residual),12,160M,0.186586,reef_fixed_L9_max512_HSIC_v2,verified

@@ -1,0 +1,4 @@
+model,block_output_BA,mlp_output_BA,mlp_output_Acc
+Source,0.6712,0.636574,0.636792
+C-r40,0.5108,0.537987,0.536164
+S-r40-rec,0.5835,0.590812,0.586478

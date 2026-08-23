@@ -1,0 +1,8 @@
+operation,wall_clock_s,peak_gpu_mib,trainable_params,trainable_ratio,trials,notes
+single_reorganization,5.516,1819.0,,,3.0,"alpha_split + gamma_compress, RTX 3090"
+single_sor_step,0.0439,2195.0,,,20.0,"post-warmup, 1 block"
+sor_full_1000_steps,44.0,2195.0,56704512.0,0.4557,,"last8 SOR, 1000 steps"
+rpda_r40_reorganization_total,221.0,1819.0,,,,40 rounds × 5.516s
+rpda_r40_sor_total,308.0,2195.0,56704512.0,0.4557,,7 recovery nodes × 44s
+rpda_r40_total,529.0,,,,,reorg 221s + SOR 308s
+finetuning_baseline_3epoch,31.0,,28351488.0,0.2278,,"last4, 3 epochs, batch8, WikiText-2 train"

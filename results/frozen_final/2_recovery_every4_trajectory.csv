@@ -1,0 +1,13 @@
+model,trajectory,checkpoint,round,checkpoint_path,pre_recovery_round,REEF_L9,BPB,BPB_ratio,KL,reef_protocol_id,output_protocol_id,status
+GPT-2,RECOVERY_EVERY4,RPDA-S-r16(rec),16,runs/twostage_recovery_every4/r16-rec/best_checkpoint,16,0.439403,5.974582,1.060201,0.341521,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r20(rec),20,runs/twostage_recovery_every4/r20-rec/best_checkpoint,20,0.415925,5.980831,1.061310,0.366494,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r24(rec),24,runs/twostage_recovery_every4/r24-rec/best_checkpoint,24,0.400239,6.019184,1.068116,0.399938,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r28(rec),28,runs/twostage_recovery_every4/r28-rec/best_checkpoint,28,0.386959,6.061101,1.075554,0.434349,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r32(rec),32,runs/twostage_recovery_every4/r32-rec/best_checkpoint,32,0.375932,6.104083,1.083181,0.468675,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r36(rec),36,runs/twostage_recovery_every4/r36-rec/best_checkpoint,36,0.366231,6.150002,1.091330,0.503697,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r40(rec),40,runs/twostage_recovery_every4/r40-rec/best_checkpoint,40,0.357002,6.191575,1.098707,0.537520,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r44(rec),44,runs/twostage_recovery_every4/r44-rec/best_checkpoint,44,0.348913,6.237262,1.106814,0.571238,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r48(rec),48,runs/twostage_recovery_every4/r48-rec/best_checkpoint,48,0.343514,6.284308,1.115162,0.602496,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r52(rec),52,runs/twostage_recovery_every4/r52-rec/best_checkpoint,52,0.336714,6.327752,1.122872,0.633154,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r56(rec),56,runs/twostage_recovery_every4/r56-rec/best_checkpoint,56,0.336833,6.365381,1.129549,0.662385,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,RECOVERY_EVERY4,RPDA-S-r60(rec),60,runs/twostage_recovery_every4/r60-rec/best_checkpoint,60,0.336396,6.392733,1.134403,0.686084,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified

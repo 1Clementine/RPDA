@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Pythia-410M every4 layer-scope RPDA. 6 of 24 layers (indices [0,4,8,12,16,20]) perturbed per round, single-shot.}
+\label{tab:pythia_every4}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Model & REEF & \thead{ED-BA\\(5-seed)} & BPB & KL & Notes \\
+\midrule
+  Pythia Source & 1.0000 & 0.683$_{\pm0.014}$ & 1.0000 & 0.0000 & 24L GPT-NeoX source \\
+  every4 r01 & 0.9260 & 0.580$_{\pm0.062}$ & 1.0500 & 0.1710 & $\alpha{=}0.10,\gamma{=}0.25$, 1 round \\
+  every4 r02 & 0.7190 & 0.532$_{\pm0.024}$ & 1.3590 & 1.2570 & 2 rounds, BPB degraded \\
+  every4 r02 rec & 0.7190 & 0.505$_{\pm0.006}$ & 1.2890 & 1.0860 & Recovery decoupling \\
+\bottomrule
+\end{tabular}
+\end{table}

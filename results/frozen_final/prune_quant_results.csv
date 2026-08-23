@@ -1,0 +1,4 @@
+model,category,REEF_L9,BPT_ratio,KL,notes
+GPT-2 Prune 30%,prune,0.775791,1.089554,0.423308,70.0% non-zero
+GPT-2 Prune 50%,prune,0.739534,1.864124,3.988254,50.0% non-zero
+GPT-2 INT8 Quant,quant,1.0,2.3798004419642913,4.356510040087578,INT8 dynamic

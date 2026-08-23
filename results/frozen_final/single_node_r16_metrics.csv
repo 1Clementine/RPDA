@@ -1,0 +1,8 @@
+model,branch,checkpoint,round,checkpoint_path,parent_checkpoint,recovery_applied_at_current_checkpoint,last_recovery_round,REEF_L9,BPB,BPB_ratio,KL,reef_protocol_id,output_protocol_id,status
+GPT-2,source,Source,0,models/victim/base/gpt2,N/A,no,N/A,1.000000,5.635329,1.000000,0.000000,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,control,RPDA-C-r16,16,runs/twostage_raw/r16,Source,no,N/A,0.507983,7.069666,1.254526,0.860743,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,treatment,RPDA-S-r16(post),16,runs/single_node_r16/r16-post/best_checkpoint,runs/twostage_raw/r16,yes,16,0.439403,5.974582,1.060201,0.341521,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,control,RPDA-C-r20,20,runs/twostage_raw/r20,RPDA-C-r16,no,N/A,0.492083,7.313032,1.297711,1.025081,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,treatment,RPDA-S-r20(r16-only),20,runs/single_node_r16/r20-r16-only,runs/single_node_r16/r16-post/best_checkpoint,no,16,0.425621,6.082926,1.079427,0.403878,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,control,RPDA-C-r24,24,runs/twostage_raw/r24,RPDA-C-r20,no,N/A,0.483097,7.571507,1.343578,1.204205,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
+GPT-2,treatment,RPDA-S-r24(r16-only),24,runs/single_node_r16/r24-r16-only,runs/single_node_r16/r20-r16-only,no,16,0.416409,6.196787,1.099632,0.474021,reef_fixed_L9_max512_HSIC_v2,bpb_wikitext_25600_v2,verified
