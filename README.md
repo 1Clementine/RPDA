@@ -17,6 +17,7 @@
 - **评估数据**：`data/`（WikiText-2 test、TruthfulQA、SOR 恢复训练集）
 - **论文图表**：`Final/figures/`、`Final/tables/`
 - **模型定义**：`models/victim/base/gpt2/` 仅保留 `config.json` + tokenizer 文件
+- **环境依赖**：`requirements.txt`（冻结环境实测版本）
 
 **已移除（权重，可再生成）**：
 
@@ -27,6 +28,26 @@
 | SOR 恢复检查点 `checkpoints/S-r16-rec` 等 | 用 `scripts_final/build_recovery_trajectory.py` 重建 |
 
 > 注：脚本内路径硬编码为完整项目的相对路径（`runs/twostage_*`、`models/victim/base/gpt2`）。在完整项目环境（Slim-transformer）中运行即可；本仓库用于论文审阅的代码与结果归档。
+
+---
+
+## 环境与安装
+
+**冻结环境**（2026-08-15 实测）：Python 3.8 + CUDA 11.7（RTX 3090，torch 2.0.1+cu117）。
+
+完整依赖清单见 `requirements.txt`：
+
+```bash
+# 1. torch 的 +cu117 变体需从 PyTorch 官方 wheel 源安装
+pip install torch==2.0.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+
+# 2. 其余依赖
+pip install -r requirements.txt
+```
+
+> `torch==2.0.1+cu117` 因需专用 wheel 源，未直接写进 `requirements.txt`；其余依赖
+> 均可由 `-r requirements.txt` 安装。若遇依赖解析冲突，可将文件末尾注释中的
+> 关键传递依赖（`tokenizers`/`safetensors`/`huggingface_hub`）取消注释固定。
 
 ---
 
